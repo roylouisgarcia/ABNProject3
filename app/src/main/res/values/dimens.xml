@@ -8,5 +8,8 @@
     <dimen name="margin_left_button">160dp</dimen>
     <dimen name="padding_top_checkbox">16dp</dimen>
     <dimen name="margin_left_checkbox">8dp</dimen>
+    <dimen name="radio_text_size">16sp</dimen>
+    <dimen name="checkbox_text_size">12sp</dimen>
+    <dimen name="button_text_size">13sp</dimen>
 
 </resources>

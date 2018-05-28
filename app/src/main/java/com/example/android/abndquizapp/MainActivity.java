@@ -1,6 +1,5 @@
 package com.example.android.abndquizapp;
 
-
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,8 +8,11 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    public int score = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,13 +20,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public int score = 0;
-
     /**
      * This method is called when the submit button is clicked
      * @param view
      */
-
     public void submitAnswer(View view) {
 
 
@@ -92,14 +91,14 @@ public class MainActivity extends AppCompatActivity {
         // Checks if the results should be emailed or not
         if (willEmail == true){
             scoreBoard.setText("Your score and feedback will be emailed.");
+            Toast.makeText(this, "Opening email app.. :) Challenge your friends to take the quiz, too", Toast.LENGTH_LONG).show();
             composeEmail("Guitar Quiz App Results" , scoreInfo);
             score = 0;
         }else{
             scoreBoard.setText(scoreInfo);
+            Toast.makeText(this, "Your score is shown above", Toast.LENGTH_SHORT).show();
             score = 0;
         }
-
-
 
     }
 
@@ -126,12 +125,11 @@ public class MainActivity extends AppCompatActivity {
     public void resetQuiz(View view) {
         score = 0;
 
-
         CheckBox willEmailCB = (CheckBox) findViewById(R.id.sendEmail);
         willEmailCB.setChecked(false);
 
         TextView scoreInformation = (TextView) findViewById(R.id.scoreBoard);
-        scoreInformation.setText("Quiz Reset Successful!");
+        Toast.makeText(this, "Quiz Reset Successful!", Toast.LENGTH_SHORT).show();
 
         //Reset buttons for question 1
         RadioButton answer1a = (RadioButton) findViewById(R.id.answerOneA);

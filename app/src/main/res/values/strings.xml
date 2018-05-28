@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Guitar Quiz App</string>
-    <string name="app_instructions">Take the Guitar Quiz and have email anyone who doubts how much you know about the guitar, at least in the theoretical aspect. :) </string>
+    <string name="app_instructions">Take the Guitar Quiz and email anyone who doubts how much you know about the guitar... at least in theoretical guitar concepts ....   :) thats a start! </string>
     <string name="app_description">This app is the third project deliverable for the Grow with Google - Android Basic Nanodegree. </string>
     <string name="sendEmail"> Toggle if you want your score to be emailed or shown here: Email = checked, Shown = unchecked</string>
     <string name="showAnswerKey"> Show Score </string>
