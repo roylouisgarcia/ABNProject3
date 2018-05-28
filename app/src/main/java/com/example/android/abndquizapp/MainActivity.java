@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         boolean willEmail = willEmailCB.isChecked();
 
         // TextView to contain the score and feedback
-        TextView scoreBoar = (TextView) findViewById(R.id.scoreBoard);
+        TextView scoreBoard = (TextView) findViewById(R.id.scoreBoard);
 
         // Aggregated string that will be show the scores via email or in the app
         String scoreInfo = "Feedback: \n";
@@ -91,11 +91,11 @@ public class MainActivity extends AppCompatActivity {
 
         // Checks if the results should be emailed or not
         if (willEmail == true){
-            scoreBoar.setText("Your score and feedback will be emailed.");
+            scoreBoard.setText("Your score and feedback will be emailed.");
             composeEmail("Guitar Quiz App Results" , scoreInfo);
             score = 0;
         }else{
-            scoreBoar.setText(scoreInfo);
+            scoreBoard.setText(scoreInfo);
             score = 0;
         }
 
@@ -126,8 +126,12 @@ public class MainActivity extends AppCompatActivity {
     public void resetQuiz(View view) {
         score = 0;
 
+
         CheckBox willEmailCB = (CheckBox) findViewById(R.id.sendEmail);
         willEmailCB.setChecked(false);
+
+        TextView scoreInformation = (TextView) findViewById(R.id.scoreBoard);
+        scoreInformation.setText("Quiz Reset Successful!");
 
         //Reset buttons for question 1
         RadioButton answer1a = (RadioButton) findViewById(R.id.answerOneA);
@@ -168,6 +172,7 @@ public class MainActivity extends AppCompatActivity {
         //Reset EditText to blank
         EditText answer5value = (EditText) findViewById(R.id.answerEditText);
         answer5value.setText("");
+
 
     }
 
