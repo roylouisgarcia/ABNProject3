@@ -3,10 +3,12 @@ package com.example.android.abndquizapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,14 +32,12 @@ public class MainActivity extends AppCompatActivity {
         // Figure out if the user wants the results to be emailed or shown in the app
         CheckBox willEmailCB = (CheckBox) findViewById(R.id.sendEmail);
         boolean willEmail = willEmailCB.isChecked();
-
         // TextView to contain the score and feedback
         TextView scoreBoard = (TextView) findViewById(R.id.scoreBoard);
-
         // Aggregated string that will be show the scores via email or in the app
         String scoreInfo = "Feedback: \n";
 
-        // Checks if the answer for Question 1 is correct
+        // Checks if the answer for Question 1 is correct which is C
         RadioButton answer1 = (RadioButton) findViewById(R.id.answerOneC);
         if (answer1.isChecked()){
             scoreInfo += "\nAnswer # 1 is correct.";
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
             scoreInfo += "\nAnswer # 1 is incorrect\n\t- The correct answer is a D major.";
         }
 
-        // Checks if the answer for Question 2 is correct
+        // Checks if the answer for Question 2 is correct which is B
         RadioButton answer2 = (RadioButton) findViewById(R.id.answerTwoB);
         if (answer2.isChecked()){
             score += 1;
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             scoreInfo += "\nAnswer # 2 is incorrect\n\t- The correct answer is a minor chord.";
         }
 
-        // Checks if the answer for Question 3 is correct
+        // Checks if the answer for Question 3 is correct which is D
         RadioButton answer3 = (RadioButton) findViewById(R.id.answerThreeD);
         if (answer3.isChecked()){
             score += 1;
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
             scoreInfo += "\nAnswer # 3 is incorrect\n\t- The correct answer is a capo.";
         }
 
-        // Checks if the answer for Question 4 is correct
+        // Checks if the answer for Question 4 is correct which is B
         RadioButton answer4 = (RadioButton) findViewById(R.id.answerFourB);
         if (answer4.isChecked()){
             score += 1;
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
             scoreInfo += "\nAnswer # 4 is incorrect\n\t- The correct answer is an E minor.";
         }
 
-        // Checks if the answer for Question 5 is correct
+        // Checks if the answer for Question 5 is correct which is Slash, or SLASH, or SLaSh - toLowerCase takes care of the variations
         EditText answer5 = (EditText) findViewById(R.id.answerEditText);
         String answer5Value = answer5.getText().toString();
         String lc_answer5Value = answer5Value.toLowerCase();
@@ -89,16 +89,20 @@ public class MainActivity extends AppCompatActivity {
         scoreInfo += "\n\nTotal Score is " + score + "/5.";
 
         // Checks if the results should be emailed or not
+        Toast toast = Toast.makeText(this, "", Toast.LENGTH_LONG);
+
+
         if (willEmail == true){
             scoreBoard.setText("Your score and feedback will be emailed.");
-            Toast.makeText(this, "Opening email app.. :) Challenge your friends to take the quiz, too", Toast.LENGTH_LONG).show();
+            toast.makeText(this, "Opening email app.. :) Challenge your friends to take the quiz, too", Toast.LENGTH_LONG).show();
             composeEmail("Guitar Quiz App Results" , scoreInfo);
             score = 0;
         }else{
             scoreBoard.setText(scoreInfo);
-            Toast.makeText(this, "Your score is shown above", Toast.LENGTH_SHORT).show();
+            toast.makeText(this, "Your score is shown above", Toast.LENGTH_SHORT).show();
             score = 0;
         }
+
 
     }
 
@@ -129,43 +133,20 @@ public class MainActivity extends AppCompatActivity {
         willEmailCB.setChecked(false);
 
         TextView scoreInformation = (TextView) findViewById(R.id.scoreBoard);
-        Toast.makeText(this, "Quiz Reset Successful!", Toast.LENGTH_SHORT).show();
+        Toast resetToast = Toast.makeText(this, "Quiz Reset Successful!", Toast.LENGTH_SHORT);
+        resetToast.setGravity(Gravity.CENTER_VERTICAL, 0,0);
+        resetToast.show();
 
         //Reset buttons for question 1
-        RadioButton answer1a = (RadioButton) findViewById(R.id.answerOneA);
-        answer1a.setChecked(false);
-        RadioButton answer1b = (RadioButton) findViewById(R.id.answerOneB);
-        answer1b.setChecked(false);
-        RadioButton answer1c = (RadioButton) findViewById(R.id.answerOneC);
-        answer1c.setChecked(false);
-        RadioButton answer1d = (RadioButton) findViewById(R.id.answerOneD);
-        answer1d.setChecked(false);
+        RadioGroup radioGroup1 = (RadioGroup) findViewById(R.id.question1);
+        radioGroup1.clearCheck();
+        RadioGroup radioGroup2 = (RadioGroup) findViewById(R.id.question2);
+        radioGroup2.clearCheck();
+        RadioGroup radioGroup3 = (RadioGroup) findViewById(R.id.question3);
+        radioGroup3.clearCheck();
+        RadioGroup radioGroup4 = (RadioGroup) findViewById(R.id.question4);
+        radioGroup4.clearCheck();
 
-        //Reset buttons for question 2
-        RadioButton answer2a = (RadioButton) findViewById(R.id.answerTwoA);
-        answer2a.setChecked(false);
-        RadioButton answer2b = (RadioButton) findViewById(R.id.answerTwoB);
-        answer2b.setChecked(false);
-
-        //Reset buttons for question 3
-        RadioButton answer3a = (RadioButton) findViewById(R.id.answerThreeA);
-        answer3a.setChecked(false);
-        RadioButton answer3b = (RadioButton) findViewById(R.id.answerThreeB);
-        answer3b.setChecked(false);
-        RadioButton answer3c = (RadioButton) findViewById(R.id.answerThreeC);
-        answer3c.setChecked(false);
-        RadioButton answer3d = (RadioButton) findViewById(R.id.answerThreeD);
-        answer3d.setChecked(false);
-
-        //Reset buttons for question 4
-        RadioButton answer4a = (RadioButton) findViewById(R.id.answerFourA);
-        answer4a.setChecked(false);
-        RadioButton answer4b = (RadioButton) findViewById(R.id.answerFourB);
-        answer4b.setChecked(false);
-        RadioButton answer4c = (RadioButton) findViewById(R.id.answerFourC);
-        answer4c.setChecked(false);
-        RadioButton answer4d = (RadioButton) findViewById(R.id.answerFourD);
-        answer4d.setChecked(false);
 
         //Reset EditText to blank
         EditText answer5value = (EditText) findViewById(R.id.answerEditText);
