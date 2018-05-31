@@ -152,6 +152,10 @@ public class MainActivity extends AppCompatActivity {
         EditText answer5value = (EditText) findViewById(R.id.answerEditText);
         answer5value.setText("");
 
+        //Reset the Scoreboard TextView
+        TextView scoreboard = (TextView) findViewById(R.id.scoreBoard);
+        scoreboard.setText("");
+
 
     }
 
