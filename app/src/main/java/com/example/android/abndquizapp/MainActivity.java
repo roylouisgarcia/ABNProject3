@@ -90,6 +90,8 @@ public class MainActivity extends AppCompatActivity {
             scoreInfo += "\nAnswer # 5 is incorrect\n\t- Slash is the lead guitarist for GNR and not " + answer5Value + ".";
         }
 
+
+
         //checks if the right 3 out of 24 possible checkboxes are toggled on
         CheckBox fret1string1 = (CheckBox) findViewById(R.id.fret1string1);
         CheckBox fret1string2 = (CheckBox) findViewById(R.id.fret1string2);
