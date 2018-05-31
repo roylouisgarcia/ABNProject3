@@ -22,9 +22,11 @@ I was able to use simple text manipulating commands shown below:
 
 Using notepad's Find > Replace:
 
-<img src="findreplacementnotepad.jpg" alt="screen shot of the code I cut, alter and paste back using notepad" width="400px" />
+![screen shot of the code I cut, alter and paste back using notepad][notepad]
 
 Using Git-bash to practice my bulk processing skills using grep, awk, and text piping.
 
-<img src="blukprocessing.jpg" alt="screen shot of Git bash cli" width="400px" />
+![Using Git-bash to practice my bulk processing skills using grep, awk, and text piping][bulk]
 
+[bulk]: https://github.com/roylouislgarcia/ABNProject3/blob/master/bulkprocessing.jpg
+[notepad]: https://github.com/roylouislgarcia/ABNProject3/blob/master/findreplacenotepad.jpg
