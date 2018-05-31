@@ -89,19 +89,22 @@ public class MainActivity extends AppCompatActivity {
         scoreInfo += "\n\nTotal Score is " + score + "/5.";
 
         // Checks if the results should be emailed or not
-        Toast toast = Toast.makeText(this, "", Toast.LENGTH_LONG);
 
+        String toastSubmitText = "";
 
         if (willEmail == true){
             scoreBoard.setText("Your score and feedback will be emailed.");
-            toast.makeText(this, "Opening email app.. :) Challenge your friends to take the quiz, too", Toast.LENGTH_LONG).show();
+            toastSubmitText += "Your score is " + score + "/5. Email App is opening.";
             composeEmail("Guitar Quiz App Results" , scoreInfo);
-            score = 0;
         }else{
             scoreBoard.setText(scoreInfo);
-            toast.makeText(this, "Your score is shown above", Toast.LENGTH_SHORT).show();
-            score = 0;
+            toastSubmitText += "Your score is " + score + "/5.";
         }
+        score = 0;
+
+        Toast toastSubmit = Toast.makeText(this, toastSubmitText, Toast.LENGTH_LONG);
+        toastSubmit.setGravity(Gravity.CENTER_VERTICAL, 0,0);
+        toastSubmit.show();
 
 
     }
