@@ -90,11 +90,62 @@ public class MainActivity extends AppCompatActivity {
             scoreInfo += "\nAnswer # 5 is incorrect\n\t- Slash is the lead guitarist for GNR and not " + answer5Value + ".";
         }
 
-
         //checks if the right 3 out of 24 possible checkboxes are toggled on
+        CheckBox fret1string1 = (CheckBox) findViewById(R.id.fret1string1);
+        CheckBox fret1string2 = (CheckBox) findViewById(R.id.fret1string2);
+        CheckBox fret1string3 = (CheckBox) findViewById(R.id.fret1string3);
+        CheckBox fret1string4 = (CheckBox) findViewById(R.id.fret1string4);
+        CheckBox fret1string5 = (CheckBox) findViewById(R.id.fret1string5);
+        CheckBox fret1string6 = (CheckBox) findViewById(R.id.fret1string6);
+        CheckBox fret2string1 = (CheckBox) findViewById(R.id.fret2string1);
+        CheckBox fret2string2 = (CheckBox) findViewById(R.id.fret2string2);
+        CheckBox fret2string3 = (CheckBox) findViewById(R.id.fret2string3);
+        CheckBox fret2string4 = (CheckBox) findViewById(R.id.fret2string4);
+        CheckBox fret2string5 = (CheckBox) findViewById(R.id.fret2string5);
+        CheckBox fret2string6 = (CheckBox) findViewById(R.id.fret2string6);
+        CheckBox fret3string1 = (CheckBox) findViewById(R.id.fret3string1);
+        CheckBox fret3string2 = (CheckBox) findViewById(R.id.fret3string2);
+        CheckBox fret3string3 = (CheckBox) findViewById(R.id.fret3string3);
+        CheckBox fret3string4 = (CheckBox) findViewById(R.id.fret3string4);
+        CheckBox fret3string5 = (CheckBox) findViewById(R.id.fret3string5);
+        CheckBox fret3string6 = (CheckBox) findViewById(R.id.fret3string6);
+        CheckBox fret4string1 = (CheckBox) findViewById(R.id.fret4string1);
+        CheckBox fret4string2 = (CheckBox) findViewById(R.id.fret4string2);
+        CheckBox fret4string3 = (CheckBox) findViewById(R.id.fret4string3);
+        CheckBox fret4string4 = (CheckBox) findViewById(R.id.fret4string4);
+        CheckBox fret4string5 = (CheckBox) findViewById(R.id.fret4string5);
+        CheckBox fret4string6 = (CheckBox) findViewById(R.id.fret4string6);
 
-        if ()
-        scoreInfo += "\n\nTotal Score is " + score + "/5.";
+        if (!fret1string1.isChecked() && !fret1string2.isChecked() &&
+                !fret1string3.isChecked() &&
+                !fret1string4.isChecked() &&
+                !fret1string5.isChecked() &&
+                !fret1string6.isChecked() &&
+                !fret2string1.isChecked() &&
+                fret2string2.isChecked() && //<--- should be toggled on
+                !fret2string3.isChecked() &&
+                !fret2string4.isChecked() &&
+                !fret2string5.isChecked() &&
+                !fret2string6.isChecked() &&
+                fret3string1.isChecked() && //<--- should be toggled on
+                !fret3string2.isChecked() &&
+                !fret3string3.isChecked() &&
+                !fret3string4.isChecked() &&
+                !fret3string5.isChecked() &&
+                fret3string6.isChecked() && //<--- should be toggled on
+                !fret4string1.isChecked() &&
+                !fret4string2.isChecked() &&
+                !fret4string3.isChecked() &&
+                !fret4string4.isChecked() &&
+                !fret4string5.isChecked() &&
+                !fret4string6.isChecked()) {
+            score += 1;
+            scoreInfo += "\nAnswer # 6 is correct\n\t- That is a G Major chord!.";
+        } else {
+            scoreInfo += "\nAnswer # 6 is incorrect\n\t- That is not the answer I am looking for.";
+        }
+
+        scoreInfo += "\n\nTotal Score is " + score + "/6.";
 
         // Checks if the results should be emailed or not
 
@@ -102,11 +153,11 @@ public class MainActivity extends AppCompatActivity {
 
         if (willEmail == true) {
             scoreBoard.setText("Your score and feedback will be emailed.");
-            toastSubmitText += "Your score is " + score + "/5. Email App is opening.";
+            toastSubmitText += "Your score is " + score + "/6. Email App is opening.";
             composeEmail("Guitar Quiz App Results", scoreInfo);
         } else {
             scoreBoard.setText(scoreInfo);
-            toastSubmitText += "Your score is " + score + "/5.";
+            toastSubmitText += "Your score is " + score + "/6.";
         }
         score = 0;
 
@@ -227,6 +278,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
 
 }
 
