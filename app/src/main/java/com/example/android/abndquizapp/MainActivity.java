@@ -33,8 +33,10 @@ public class MainActivity extends AppCompatActivity {
         // Figure out if the user wants the results to be emailed or shown in the app
         CheckBox willEmailCB = (CheckBox) findViewById(R.id.sendEmail);
         boolean willEmail = willEmailCB.isChecked();
+
         // TextView to contain the score and feedback
         TextView scoreBoard = (TextView) findViewById(R.id.scoreBoard);
+
         // Aggregated string that will be show the scores via email or in the app
         String scoreInfo = "Feedback: \n";
 
@@ -88,6 +90,10 @@ public class MainActivity extends AppCompatActivity {
             scoreInfo += "\nAnswer # 5 is incorrect\n\t- Slash is the lead guitarist for GNR and not " + answer5Value + ".";
         }
 
+
+        //checks if the right 3 out of 24 possible checkboxes are toggled on
+
+        if ()
         scoreInfo += "\n\nTotal Score is " + score + "/5.";
 
         // Checks if the results should be emailed or not
@@ -104,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
         }
         score = 0;
 
+        // displays the toast at the center vertical
         Toast toastSubmit = Toast.makeText(this, toastSubmitText, Toast.LENGTH_LONG);
         toastSubmit.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
         toastSubmit.show();
@@ -154,6 +161,61 @@ public class MainActivity extends AppCompatActivity {
         RadioGroup radioGroup4 = (RadioGroup) findViewById(R.id.question4);
         radioGroup4.clearCheck();
 
+        //Reset checkboxes on the first fret of the guitar
+        CheckBox fret1string1 = (CheckBox) findViewById(R.id.fret1string1);
+        fret1string1.setChecked(false);
+        CheckBox fret1string2 = (CheckBox) findViewById(R.id.fret1string2);
+        fret1string2.setChecked(false);
+        CheckBox fret1string3 = (CheckBox) findViewById(R.id.fret1string3);
+        fret1string3.setChecked(false);
+        CheckBox fret1string4 = (CheckBox) findViewById(R.id.fret1string4);
+        fret1string4.setChecked(false);
+        CheckBox fret1string5 = (CheckBox) findViewById(R.id.fret1string5);
+        fret1string5.setChecked(false);
+        CheckBox fret1string6 = (CheckBox) findViewById(R.id.fret1string6);
+        fret1string6.setChecked(false);
+
+        //Reset checkboxes on the second fret of the guitar
+        CheckBox fret2string1 = (CheckBox) findViewById(R.id.fret2string1);
+        fret2string1.setChecked(false);
+        CheckBox fret2string2 = (CheckBox) findViewById(R.id.fret2string2);
+        fret2string2.setChecked(false);
+        CheckBox fret2string3 = (CheckBox) findViewById(R.id.fret2string3);
+        fret2string3.setChecked(false);
+        CheckBox fret2string4 = (CheckBox) findViewById(R.id.fret2string4);
+        fret2string4.setChecked(false);
+        CheckBox fret2string5 = (CheckBox) findViewById(R.id.fret2string5);
+        fret2string5.setChecked(false);
+        CheckBox fret2string6 = (CheckBox) findViewById(R.id.fret2string6);
+        fret2string6.setChecked(false);
+
+        //Reset checkboxes on the third fret of the guitar
+        CheckBox fret3string1 = (CheckBox) findViewById(R.id.fret3string1);
+        fret3string1.setChecked(false);
+        CheckBox fret3string2 = (CheckBox) findViewById(R.id.fret3string2);
+        fret3string2.setChecked(false);
+        CheckBox fret3string3 = (CheckBox) findViewById(R.id.fret3string3);
+        fret3string3.setChecked(false);
+        CheckBox fret3string4 = (CheckBox) findViewById(R.id.fret3string4);
+        fret3string4.setChecked(false);
+        CheckBox fret3string5 = (CheckBox) findViewById(R.id.fret3string5);
+        fret3string5.setChecked(false);
+        CheckBox fret3string6 = (CheckBox) findViewById(R.id.fret3string6);
+        fret3string6.setChecked(false);
+
+        //Reset checkboxes on the fourth fret of the guitar
+        CheckBox fret4string1 = (CheckBox) findViewById(R.id.fret4string1);
+        fret4string1.setChecked(false);
+        CheckBox fret4string2 = (CheckBox) findViewById(R.id.fret4string2);
+        fret4string2.setChecked(false);
+        CheckBox fret4string3 = (CheckBox) findViewById(R.id.fret4string3);
+        fret4string3.setChecked(false);
+        CheckBox fret4string4 = (CheckBox) findViewById(R.id.fret4string4);
+        fret4string4.setChecked(false);
+        CheckBox fret4string5 = (CheckBox) findViewById(R.id.fret4string5);
+        fret4string5.setChecked(false);
+        CheckBox fret4string6 = (CheckBox) findViewById(R.id.fret4string6);
+        fret4string6.setChecked(false);
 
         //Reset EditText to blank
         EditText answer5value = (EditText) findViewById(R.id.answerEditText);

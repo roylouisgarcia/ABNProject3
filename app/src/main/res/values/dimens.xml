@@ -11,5 +11,22 @@
     <dimen name="radio_text_size">16sp</dimen>
     <dimen name="checkbox_text_size">12sp</dimen>
     <dimen name="button_text_size">13sp</dimen>
-
+    <dimen name="fretboard_margin">40dp</dimen>
+    <dimen name="firstfretpaddingtop">90dp</dimen>
+    <dimen name="firstfretpaddingleft">34dp</dimen>
+    <dimen name="firstfretpaddingright">38dp</dimen>
+    <dimen name="firstfretpaddingbottom">40dp</dimen>
+    <dimen name="secondfretpaddingtop">50dp</dimen>
+    <dimen name="secondfretpaddingleft">36dp</dimen>
+    <dimen name="secondfretpaddingright">28dp</dimen>
+    <dimen name="secondfretpaddingbottom">40dp</dimen>
+    <dimen name="thirdfretpaddingtop">50dp</dimen>
+    <dimen name="thirdfretpaddingleft">30dp</dimen>
+    <dimen name="thirdfretpaddingright">24dp</dimen>
+    <dimen name="thirdfretpaddingbottom">40dp</dimen>
+    <dimen name="fourthfretpaddingtop">50dp</dimen>
+    <dimen name="fourthfretpaddingleft">30dp</dimen>
+    <dimen name="fourthfretpaddingright">0dp</dimen>
+    <dimen name="fourthfretpaddingbottom">40dp</dimen>
+    <dimen name="checkboxoffset">6dp</dimen>
 </resources>

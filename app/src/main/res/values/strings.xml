@@ -23,4 +23,5 @@
     <string name="answerC4">c.  E Minor 7th</string>
     <string name="answerD4">d.  E Minor 6th</string>
     <string name="questionEditText">5. Who was the original lead guitarist for Gun\'s and Roses?</string>
+    <string name="create_chord">6. By turning on three checkboxes to denote which strings and on what fret should be pressed, create the G Major Chord: </string>
 </resources>

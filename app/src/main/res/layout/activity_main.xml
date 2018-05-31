@@ -234,6 +234,191 @@
             android:hint="type your answer here"
             android:inputType="textCapWords" />
 
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/create_chord"/>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/guitarfretboard"
+            android:layout_margin="@dimen/fretboard_margin"
+            android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/firstfretpaddingtop"
+                android:paddingLeft="@dimen/firstfretpaddingleft"
+                android:paddingRight="@dimen/firstfretpaddingright"
+                android:paddingBottom="@dimen/firstfretpaddingbottom">
+                <CheckBox
+                    android:id="@+id/fret1string1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <CheckBox
+                    android:id="@+id/fret1string2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <CheckBox
+                    android:id="@+id/fret1string3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <CheckBox
+                    android:id="@+id/fret1string4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <CheckBox
+                    android:id="@+id/fret1string5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <CheckBox
+                    android:id="@+id/fret1string6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/secondfretpaddingtop"
+                android:paddingLeft="@dimen/secondfretpaddingleft"
+                android:paddingRight="@dimen/secondfretpaddingright"
+                android:paddingBottom="@dimen/secondfretpaddingbottom">
+                <CheckBox
+                    android:id="@+id/fret2string1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <CheckBox
+                android:id="@+id/fret2string2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/checkboxoffset" />
+
+            <CheckBox
+                android:id="@+id/fret2string3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/checkboxoffset"/>
+
+            <CheckBox
+                android:id="@+id/fret2string4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <CheckBox
+                android:id="@+id/fret2string5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <CheckBox
+                android:id="@+id/fret2string6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/thirdfretpaddingtop"
+                android:paddingLeft="@dimen/thirdfretpaddingleft"
+                android:paddingRight="@dimen/thirdfretpaddingright"
+                android:paddingBottom="@dimen/thirdfretpaddingbottom">
+                <CheckBox
+                    android:id="@+id/fret3string1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/checkboxoffset"   />
+                <CheckBox
+                    android:id="@+id/fret3string2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/checkboxoffset"/>
+
+                <CheckBox
+                    android:id="@+id/fret3string3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <CheckBox
+                    android:id="@+id/fret3string4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="6dp" />
+
+                <CheckBox
+                    android:id="@+id/fret3string5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <CheckBox
+                    android:id="@+id/fret3string6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/fourthfretpaddingtop"
+                android:paddingLeft="@dimen/fourthfretpaddingleft"
+                android:paddingRight="@dimen/fourthfretpaddingright"
+                android:paddingBottom="@dimen/fourthfretpaddingbottom">
+                <CheckBox
+                    android:id="@+id/fret4string1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/checkboxoffset" />
+                <CheckBox
+                    android:id="@+id/fret4string2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/checkboxoffset"/>
+
+                <CheckBox
+                    android:id="@+id/fret4string3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/checkboxoffset"  />
+
+                <CheckBox
+                    android:id="@+id/fret4string4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <CheckBox
+                    android:id="@+id/fret4string5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <CheckBox
+                    android:id="@+id/fret4string6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
         <TextView
             android:id="@+id/scoreBoard"
             android:layout_width="wrap_content"
