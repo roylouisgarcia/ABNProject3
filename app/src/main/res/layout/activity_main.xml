@@ -16,6 +16,7 @@
             android:layout_marginBottom="@dimen/margin_bottom"
             android:layout_marginLeft="@dimen/margin_left"
             android:layout_marginTop="@dimen/margin_top"
+            android:textSize="@dimen/instructions_text_size"
             android:text="@string/app_instructions" />
 
         <TextView
@@ -35,8 +36,8 @@
             android:id="@+id/question1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/radio_margin_left"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:layout_margin="@dimen/radio_group_margin">
 
             <RadioButton
                 android:id="@+id/answerOneA"
@@ -238,30 +239,31 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/create_chord"/>
+            android:text="@string/create_chord" />
 
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/guitarfretboard"
             android:layout_margin="@dimen/fretboard_margin"
+            android:background="@drawable/guitarfretboard"
             android:orientation="vertical">
-
 
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingTop="@dimen/firstfretpaddingtop"
+                android:paddingBottom="@dimen/firstfretpaddingbottom"
                 android:paddingLeft="@dimen/firstfretpaddingleft"
                 android:paddingRight="@dimen/firstfretpaddingright"
-                android:paddingBottom="@dimen/firstfretpaddingbottom">
+                android:paddingTop="@dimen/firstfretpaddingtop">
+
                 <CheckBox
                     android:id="@+id/fret1string1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+
                 <CheckBox
                     android:id="@+id/fret1string2"
                     android:layout_width="wrap_content"
@@ -293,62 +295,66 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingTop="@dimen/secondfretpaddingtop"
+                android:paddingBottom="@dimen/secondfretpaddingbottom"
                 android:paddingLeft="@dimen/secondfretpaddingleft"
                 android:paddingRight="@dimen/secondfretpaddingright"
-                android:paddingBottom="@dimen/secondfretpaddingbottom">
+                android:paddingTop="@dimen/secondfretpaddingtop">
+
                 <CheckBox
                     android:id="@+id/fret2string1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+
                 <CheckBox
-                android:id="@+id/fret2string2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/checkboxoffset" />
+                    android:id="@+id/fret2string2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/checkboxoffset" />
 
-            <CheckBox
-                android:id="@+id/fret2string3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/checkboxoffset"/>
+                <CheckBox
+                    android:id="@+id/fret2string3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/checkboxoffset" />
 
-            <CheckBox
-                android:id="@+id/fret2string4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                <CheckBox
+                    android:id="@+id/fret2string4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
-            <CheckBox
-                android:id="@+id/fret2string5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                <CheckBox
+                    android:id="@+id/fret2string5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
-            <CheckBox
-                android:id="@+id/fret2string6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                <CheckBox
+                    android:id="@+id/fret2string6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
-        </LinearLayout>
+            </LinearLayout>
 
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingTop="@dimen/thirdfretpaddingtop"
+                android:paddingBottom="@dimen/thirdfretpaddingbottom"
                 android:paddingLeft="@dimen/thirdfretpaddingleft"
                 android:paddingRight="@dimen/thirdfretpaddingright"
-                android:paddingBottom="@dimen/thirdfretpaddingbottom">
+                android:paddingTop="@dimen/thirdfretpaddingtop">
+
                 <CheckBox
                     android:id="@+id/fret3string1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/checkboxoffset"   />
+                    android:layout_marginRight="@dimen/checkboxoffset" />
+
                 <CheckBox
                     android:id="@+id/fret3string2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/checkboxoffset"/>
+                    android:layout_marginRight="@dimen/checkboxoffset" />
 
                 <CheckBox
                     android:id="@+id/fret3string3"
@@ -378,26 +384,28 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingTop="@dimen/fourthfretpaddingtop"
+                android:paddingBottom="@dimen/fourthfretpaddingbottom"
                 android:paddingLeft="@dimen/fourthfretpaddingleft"
                 android:paddingRight="@dimen/fourthfretpaddingright"
-                android:paddingBottom="@dimen/fourthfretpaddingbottom">
+                android:paddingTop="@dimen/fourthfretpaddingtop">
+
                 <CheckBox
                     android:id="@+id/fret4string1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="@dimen/checkboxoffset" />
+
                 <CheckBox
                     android:id="@+id/fret4string2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/checkboxoffset"/>
+                    android:layout_marginRight="@dimen/checkboxoffset" />
 
                 <CheckBox
                     android:id="@+id/fret4string3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/checkboxoffset"  />
+                    android:layout_marginRight="@dimen/checkboxoffset" />
 
                 <CheckBox
                     android:id="@+id/fret4string4"

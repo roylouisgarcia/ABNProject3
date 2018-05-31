@@ -12,7 +12,17 @@ At this point, the app demonstrates the learners ability to make use of resource
 
 ### Screenshot Recording
 
-Below is a screenshot of the app at work:
-![screenshot gif image](screenshot.gif)
+Below is a screenshot of the app after making improvedment based on the suggestions of my project's reviewer from Udacity/Google:
+![screenshot gif image](screenshot2.gif)
 
+### Supplemental Learning
 
+I was able to use simple text manipulating commands shown below:
+
+Using notepad's Find > Replace:
+
+![screen shot of the code I cut, alter and paste back using notepad](findreplacenotepad.jpg)
+
+Using Git-bash to practice my bulk processing skills using grep, awk, and text piping.
+
+![screen shot of Git bash cli](bulkprocessing.jpg)

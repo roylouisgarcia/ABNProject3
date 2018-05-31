@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="instructions_text_size">15sp</dimen>
     <dimen name="padding_app">16dp</dimen>
     <dimen name="margin_bottom">16dp</dimen>
     <dimen name="margin_left">10dp</dimen>
@@ -9,6 +10,7 @@
     <dimen name="padding_top_checkbox">16dp</dimen>
     <dimen name="margin_left_checkbox">8dp</dimen>
     <dimen name="radio_text_size">16sp</dimen>
+    <dimen name="radio_group_margin">30dp</dimen>
     <dimen name="checkbox_text_size">12sp</dimen>
     <dimen name="button_text_size">13sp</dimen>
     <dimen name="fretboard_margin">40dp</dimen>
