@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * This method is called when the submit button is clicked
+     *
      * @param view
      */
     public void submitAnswer(View view) {
@@ -39,37 +40,37 @@ public class MainActivity extends AppCompatActivity {
 
         // Checks if the answer for Question 1 is correct which is C
         RadioButton answer1 = (RadioButton) findViewById(R.id.answerOneC);
-        if (answer1.isChecked()){
+        if (answer1.isChecked()) {
             scoreInfo += "\nAnswer # 1 is correct.";
             score += 1;
-        }else{
+        } else {
             scoreInfo += "\nAnswer # 1 is incorrect\n\t- The correct answer is a D major.";
         }
 
         // Checks if the answer for Question 2 is correct which is B
         RadioButton answer2 = (RadioButton) findViewById(R.id.answerTwoB);
-        if (answer2.isChecked()){
+        if (answer2.isChecked()) {
             score += 1;
             scoreInfo += "\nAnswer # 2 is correct.";
-        }else{
+        } else {
             scoreInfo += "\nAnswer # 2 is incorrect\n\t- The correct answer is a minor chord.";
         }
 
         // Checks if the answer for Question 3 is correct which is D
         RadioButton answer3 = (RadioButton) findViewById(R.id.answerThreeD);
-        if (answer3.isChecked()){
+        if (answer3.isChecked()) {
             score += 1;
             scoreInfo += "\nAnswer # 3 is correct.";
-        }else{
+        } else {
             scoreInfo += "\nAnswer # 3 is incorrect\n\t- The correct answer is a capo.";
         }
 
         // Checks if the answer for Question 4 is correct which is B
         RadioButton answer4 = (RadioButton) findViewById(R.id.answerFourB);
-        if (answer4.isChecked()){
+        if (answer4.isChecked()) {
             score += 1;
             scoreInfo += "\nAnswer # 4 is correct.";
-        }else{
+        } else {
             scoreInfo += "\nAnswer # 4 is incorrect\n\t- The correct answer is an E minor.";
         }
 
@@ -79,11 +80,11 @@ public class MainActivity extends AppCompatActivity {
 
         String answer5Value = answer5.getText().toString().trim();
 
-        if (answer5Value.equalsIgnoreCase("slash")){
+        if (answer5Value.equalsIgnoreCase("slash")) {
             score += 1;
             scoreInfo += "\nAnswer # 5 is correct\n\t- Slash is indeed the lead guitarist for GNR.";
 
-        }else{
+        } else {
             scoreInfo += "\nAnswer # 5 is incorrect\n\t- Slash is the lead guitarist for GNR and not " + answer5Value + ".";
         }
 
@@ -93,18 +94,18 @@ public class MainActivity extends AppCompatActivity {
 
         String toastSubmitText = "";
 
-        if (willEmail == true){
+        if (willEmail == true) {
             scoreBoard.setText("Your score and feedback will be emailed.");
             toastSubmitText += "Your score is " + score + "/5. Email App is opening.";
-            composeEmail("Guitar Quiz App Results" , scoreInfo);
-        }else{
+            composeEmail("Guitar Quiz App Results", scoreInfo);
+        } else {
             scoreBoard.setText(scoreInfo);
             toastSubmitText += "Your score is " + score + "/5.";
         }
         score = 0;
 
         Toast toastSubmit = Toast.makeText(this, toastSubmitText, Toast.LENGTH_LONG);
-        toastSubmit.setGravity(Gravity.CENTER_VERTICAL, 0,0);
+        toastSubmit.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
         toastSubmit.show();
 
 
@@ -112,10 +113,11 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * This method passes the parameters to an email intent
+     *
      * @param subject
      * @param scoreInformation
      */
-    private void composeEmail(String subject, String scoreInformation){
+    private void composeEmail(String subject, String scoreInformation) {
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("*/*");
         intent.putExtra(Intent.EXTRA_SUBJECT, subject);
@@ -128,6 +130,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * This method resets all the answers to unchecked and blank
+     *
      * @param view
      */
     public void resetQuiz(View view) {
@@ -138,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
 
         TextView scoreInformation = (TextView) findViewById(R.id.scoreBoard);
         Toast resetToast = Toast.makeText(this, "Quiz Reset Successful!", Toast.LENGTH_SHORT);
-        resetToast.setGravity(Gravity.CENTER_VERTICAL, 0,0);
+        resetToast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
         resetToast.show();
 
         //Reset buttons for question 1
