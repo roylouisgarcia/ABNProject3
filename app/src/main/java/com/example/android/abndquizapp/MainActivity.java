@@ -75,10 +75,11 @@ public class MainActivity extends AppCompatActivity {
 
         // Checks if the answer for Question 5 is correct which is Slash, or SLASH, or SLaSh - toLowerCase takes care of the variations
         EditText answer5 = (EditText) findViewById(R.id.answerEditText);
-        String answer5Value = answer5.getText().toString();
-        String lc_answer5Value = answer5Value.toLowerCase();
+        // Per Udacity reviewer's suggestions, trim() is used to get rid of extra white spaces
 
-        if (lc_answer5Value.equals("slash")){
+        String answer5Value = answer5.getText().toString().trim();
+
+        if (answer5Value.equalsIgnoreCase("slash")){
             score += 1;
             scoreInfo += "\nAnswer # 5 is correct\n\t- Slash is indeed the lead guitarist for GNR.";
 
