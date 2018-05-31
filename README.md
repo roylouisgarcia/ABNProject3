@@ -13,6 +13,7 @@ At this point, the app demonstrates the learners ability to make use of resource
 ### Screenshot Recording
 
 Below is a screenshot of the app after making improvedment based on the suggestions of my project's reviewer from Udacity/Google:
+
 <img src="screenshot2.gif" alt="screenshot of the app" width="400px"/>
 
 ### Supplemental Learning
